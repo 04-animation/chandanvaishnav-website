@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Welcome to Chandan's Animation World</h1>
+      <p>Experience the magic of animation!</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="village-scene.jpg" alt="Village Scene Animation">
+      <h2>Explore Animated Stories</h2>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>Dynamic Animations</h3>
+        <p>Immerse yourself in beautifully crafted animations.</p>
+      </div>
+      <div class="feature">
+        <h3>Village Life</h3>
+        <p>Stories inspired by rural life and traditions.</p>
+      </div>
+      <div class="feature">
+        <h3>Interactive Experiences</h3>
+        <p>Engage with stories like never before!</p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chandan Vaishnav. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

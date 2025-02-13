@@ -1,0 +1,54 @@
+// JavaScript for Animation Website
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Smooth scrolling for navigation links
+  const links = document.querySelectorAll("a[href^='#']");
+
+  links.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  // Form submission functionality
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = document.querySelector("#name").value;
+    const email = document.querySelector("#email").value;
+    const message = document.querySelector("#message").value;
+
+    if (name && email && message) {
+      alert(`Thank you, ${name}, for your message! We will get back to you soon.`);
+      form.reset();
+    } else {
+      alert("Please fill out all fields before submitting.");
+    }
+  });
+
+  // Animation effect for features section
+  const features = document.querySelectorAll(".feature");
+
+  window.addEventListener("scroll", () => {
+    features.forEach((feature) => {
+      const rect = feature.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        feature.style.transform = "scale(1)";
+        feature.style.opacity = "1";
+      } else {
+        feature.style.transform = "scale(0.9)";
+        feature.style.opacity = "0.5";
+      }
+    });
+  });
+});
